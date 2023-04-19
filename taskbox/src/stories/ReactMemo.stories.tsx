@@ -9,7 +9,7 @@ const NewMessagesCounter = (props: any) => {
     return <div>{props.count}</div>
 }
 
-const UsersSecret = (props: {users: Array<string>}) => {
+const UsersSecret = (props: { users: Array<string> }) => {
     console.log("users")
     return <div>{
         props.users.map((u, i) => <div key={i}>{u}</div>)
@@ -24,13 +24,13 @@ export const Example1 = () => {
 
     const addUser = () => {
         const newUser = "Sveta " + new Date().getTime()
-      setUsers([...users, newUser])
+        setUsers([...users, newUser])
     }
 
     return <>
-        <button onClick={() => setCounter(counter+1)}>+</button>
+        <button onClick={() => setCounter(counter + 1)}>+</button>
         <button onClick={addUser}>add user</button>
-    <NewMessagesCounter count={counter}/>
+        <NewMessagesCounter count={counter}/>
         <Users users={users}/>
     </>
 }
