@@ -5,17 +5,24 @@ import {Accordion} from "./component/Accordion/Accordion";
 import {OnOff} from "./component/OnOff/OnOff";
 import {UncontrolledAccordion} from "./component/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./component/UncontrolledRating/UncontrolledRating";
+import {UncontrolledOnOff} from "./component/UncontrolledOnOff/UncontrolledOnOff";
 
 function App() {
 
-    let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
-    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    const [isOn, setIsOn] = useState<boolean>(false)
 
     return (
         <div>
             <AppTitle appTitle={'This is App component'}/>
-            <UncontrolledAccordion titleValue={'Menu'} />
-            <UncontrolledAccordion titleValue={'My friends'} />
+
+            <OnOff isOn={isOn} onClick={setIsOn}/>
+            <OnOff isOn={isOn} onClick={setIsOn}/>
+
+
+            <UncontrolledAccordion titleValue={'Menu'}/>
+            <UncontrolledAccordion titleValue={'My friends'}/>
 
             <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
             <Accordion titleValue={"My friend"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
@@ -28,9 +35,11 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <OnOff/>
-            <OnOff/>
-            <OnOff/>
+            <UncontrolledOnOff/>
+            <UncontrolledOnOff/>
+
+
+
 
         </div>
     )
@@ -39,6 +48,7 @@ function App() {
 type AppTitlePropsType = {
     appTitle: string
 }
+
 function AppTitle(props: AppTitlePropsType) {
     return (
         <>{props.appTitle}</>
