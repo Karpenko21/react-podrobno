@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import {Rating} from "./component/Rating";
 import {Accordion} from "./component/Accordion";
+import {OnOff} from "./component/OnOff/OnOff";
 
 function App() {
+
     return (
         <div>
             <AppTitle appTitle={'This is App component'}/>
@@ -16,6 +18,11 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
+
+            <OnOff/>
+            <OnOff />
+            <OnOff/>
+
         </div>
     )
 }
