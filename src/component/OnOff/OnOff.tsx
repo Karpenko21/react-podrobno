@@ -28,7 +28,7 @@ export const OnOff = (props: OnOffPropsType) => {
         padding: "2px",
         backgroundColor: props.isOn ? "white" : "red"
     }
-    const  indicatorStyle = {
+    const indicatorStyle = {
         width: "10px",
         height: "10px",
         borderRadius: "15px",
@@ -39,10 +39,20 @@ export const OnOff = (props: OnOffPropsType) => {
     }
 
 
-        return (
+    return (
         <div style={buttonsStyle}>
-            <div style={onStyle} onClick={() => {props.onClick(true)}}>On</div>
-            <div style={offStyle} onClick={() => {props.onClick(false)}}>Off</div>
+            <div style={onStyle}
+                 onClick={() => {
+                     props.onClick(true)
+                 }}>
+                On
+            </div>
+            <div style={offStyle}
+                 onClick={() => {
+                     props.onClick(false)
+                 }}>
+                Off
+            </div>
             <div style={indicatorStyle}></div>
         </div>
     )

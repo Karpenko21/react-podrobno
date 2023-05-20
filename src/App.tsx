@@ -24,8 +24,12 @@ function App() {
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledAccordion titleValue={'My friends'}/>
 
-            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
-            <Accordion titleValue={"My friend"} collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
+            <Accordion titleValue={"Menu"}
+                       collapsed={accordionCollapsed}
+                       onClick={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+            <Accordion titleValue={"My friend"}
+                       collapsed={accordionCollapsed}
+                       onClick={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
 
             <UncontrolledRating/>
             <UncontrolledRating/>
@@ -35,10 +39,8 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <UncontrolledOnOff/>
-            <UncontrolledOnOff/>
-
-
+            <UncontrolledOnOff onChange={setIsOn}/> {isOn.toString()}
+            <UncontrolledOnOff onChange={setIsOn}/> {isOn.toString()}
 
 
         </div>
