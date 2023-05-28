@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 
 type OnOffPropsType = {
     onChange: (isOn: boolean) => void
+    defaultOn?: boolean
 }
 
 export const UncontrolledOnOff = (props: OnOffPropsType) => {
 
-    const [isOn, setIsOn] = useState(false)
+    const [isOn, setIsOn] = useState(props.defaultOn ? props.defaultOn : false)
 
     const buttonsStyle = {
         margin: "20px"
