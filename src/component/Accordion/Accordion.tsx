@@ -1,15 +1,19 @@
 import React from "react";
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string
     collapsed: boolean
     onClick: () => void
+    /**
+     * Optional color of header text
+     */
+    color?: string
 }
 
 export function Accordion(props: AccordionPropsType) {
         return (
             <div>
-                <AccordionTitle title={props.titleValue} onClick={props.onClick}/>
+                <AccordionTitle title={props.titleValue} onClick={props.onClick} color={props.color}/>
                 {!props.collapsed && <AccordionBody/>}
             </div>
         )
@@ -18,11 +22,13 @@ export function Accordion(props: AccordionPropsType) {
 type AccordionTitlePropsType = {
     title: string
     onClick: () => void
+    color?: string
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <h3 onClick={() => props.onClick()}>{props.title}</h3>
+        <h3 style={{color: props.color ? props.color : "black"}}
+            onClick={() => props.onClick()}>{props.title}</h3>
     )
 }
 

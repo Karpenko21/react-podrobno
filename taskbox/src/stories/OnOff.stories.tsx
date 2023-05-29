@@ -3,7 +3,7 @@ import {OnOff} from "../../../src/component/OnOff/OnOff";
 import {action} from '@storybook/addon-actions'
 
 export default {
-    title: 'OnOff',
+    title: 'components/OnOff',
     component: OnOff,
     tags: ['autodocs'],
     argTypes: {

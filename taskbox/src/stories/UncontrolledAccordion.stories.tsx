@@ -2,7 +2,7 @@ import React from 'react';
 import {UncontrolledAccordion} from "../../../src/component/UncontrolledAccordion/UncontrolledAccordion";
 
 export default {
-    title: 'UncontrolledAccordion',
+    title: 'components/UncontrolledAccordion',
     component: UncontrolledAccordion,
     tags: ['autodocs'],
     argTypes: {
