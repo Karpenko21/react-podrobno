@@ -31,9 +31,9 @@ function App() {
                        collapsed={accordionCollapsed}
                        onClick={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
 
+            {/*<UncontrolledRating/>
             <UncontrolledRating/>
-            <UncontrolledRating/>
-            <UncontrolledRating/>
+            <UncontrolledRating/>*/}
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
