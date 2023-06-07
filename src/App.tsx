@@ -23,13 +23,13 @@ function App() {
 
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledAccordion titleValue={'My friends'}/>
-
+{/*
             <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
-                       onClick={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+                       onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
             <Accordion titleValue={"My friend"}
                        collapsed={accordionCollapsed}
-                       onClick={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+                       onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>*/}
 
             {/*<UncontrolledRating/>
             <UncontrolledRating/>
