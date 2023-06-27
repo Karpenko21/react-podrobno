@@ -72,3 +72,36 @@ const newArray = useMemo( () => users.filter(u => u.toLowerCase().indexOf("a") >
         <Users users={newArray}/>
     </>
 }
+
+
+
+export const LikeUseCallBack  = () => {
+    console.log("LikeUseCallBack")
+    const [counter, setCounter] = useState(0)
+    const [books, setBooks] = useState(["React", "JS", "CSS", "HTML"])
+
+    const newArray = useMemo( () => books.filter(b => b.toLowerCase().indexOf("a") > -1)
+        , [books]
+    )
+
+    const addBook = () => {
+        const newBook = "Angular " + new Date().getTime()
+        setBooks([...books, newBook])
+    }
+    return <>
+        <button onClick={() => setCounter(counter+1)}>+</button>
+
+        {counter}
+        <Books books={newArray} addBook={addBook} />
+    </>
+}
+
+const BooksSecret = (props: {books: Array<string>, addBook: () => void}) => {
+    console.log("BooksSecret")
+    return <div>
+        <button onClick={props.addBook}>add book</button>
+        {props.books.map((b, i) => <div key={i}>{b}</div>)
+    }</div>
+}
+
+const Books = React.memo(BooksSecret)
