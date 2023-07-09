@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {Rating, RatingValueType} from "../../../src/component/Rating/Rating";
+import {Rating, RatingValueType} from "../component/Rating/Rating";
+
 
 
 

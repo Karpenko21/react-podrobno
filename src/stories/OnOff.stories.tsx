@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {OnOff} from "../../../src/component/OnOff/OnOff";
 import {action} from '@storybook/addon-actions'
+import {OnOff} from "../component/OnOff/OnOff";
 
 export default {
     title: 'components/OnOff',

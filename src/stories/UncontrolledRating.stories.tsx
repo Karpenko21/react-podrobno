@@ -1,7 +1,6 @@
 import React from 'react';
-
-import {UncontrolledRating} from "../../../src/component/UncontrolledRating/UncontrolledRating";
 import {action} from "@storybook/addon-actions";
+import {UncontrolledRating} from "../component/UncontrolledRating/UncontrolledRating";
 
 export default {
     title: 'components/UncontrolledRating',

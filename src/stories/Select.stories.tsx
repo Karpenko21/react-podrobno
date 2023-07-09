@@ -1,7 +1,5 @@
-import React, {ChangeEvent, useState} from 'react';
-import {Select} from "../../../src/component/Select/Select";
-// @ts-ignore
-import {action} from '@storybook/addon-actions';
+import React, {useState} from 'react';
+import {Select} from "../component/Select/Select";
 
 
 export default {

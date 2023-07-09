@@ -1,6 +1,6 @@
 import React from 'react';
-import {UncontrolledOnOff} from "../../../src/component/UncontrolledOnOff/UncontrolledOnOff";
 import {action} from "@storybook/addon-actions";
+import {UncontrolledOnOff} from "../component/UncontrolledOnOff/UncontrolledOnOff";
 
 
 export default {
